@@ -3,6 +3,7 @@
 
 """This script prints out docopt args.
 Usage: demo.py <arg1> --arg2=<arg2> [--arg3=<arg3>] [--arg4=<arg4>]
+
 Options:
 <arg>             Takes any value (this is a required positional argument)
 --arg2=<arg2>     Takes any value (this is a required option)
@@ -11,7 +12,13 @@ Options:
 """ 
 
 from docopt import docopt
+
 opt = docopt(__doc__)
-print(opt)
-print(type(opt))
-print(opt["--arg4"])
+
+def main():
+  print(opt)
+  print(type(opt))
+  print(opt["--arg4"])
+
+if __name__ == "__main__":
+    main()
